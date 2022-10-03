@@ -1,8 +1,12 @@
-# FreeRTOS Cellular Interface Reference Implementation Sierra Wireless HL7802
+# FreeRTOS Cellular Interface Reference Sierra Wireless HL7802
 
 ## Introduction
 
 This repository provides the reference implementation as cellular module ports for [Sierra Wireless HL7802](https://www.sierrawireless.com/products-and-solutions/embedded-solutions/products/hl7802/). This repository should be used with [FreeRTOS-Cellular-Interface](https://github.com/FreeRTOS/FreeRTOS-Cellular-Interface). See [FreeRTOS-Cellular-Interface README](https://github.com/FreeRTOS/FreeRTOS-Cellular-Interface/blob/main/README.md) for more details.
+
+## Use Case
+
+There is also an use case at [MQTT_Mutual_Auth_Demo_with_HL7802](https://github.com/FreeRTOS/FreeRTOS/tree/main/FreeRTOS-Plus/Demo/FreeRTOS_Cellular_Interface_Windows_Simulator/MQTT_Mutual_Auth_Demo_with_HL7802) as a demonstration to run HL7802 with FreeRTOS Windows Simulator.
 
 ## How Does Community Members to Contribute a Cellular Module Port
 
@@ -14,4 +18,4 @@ See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more inform
 
 ## License
 
-This library is licensed under the MIT-0 License. See the [LICENSE](https://github.com/FreeRTOS/freertos-cellular-interface-reference-implementation-sierra-wireless-hl7802/blob/main/LICENSE) file.
+The FreeRTOS Cellular Interface library is distributed under MIT open source license. The code in this repository is licensed under the MIT License. See the [LICENSE](https://github.com/FreeRTOS/FreeRTOS-Cellular-Interface-Reference-Sierra-Wireless-HL7802/blob/main/LICENSE) file.

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository provides the reference implementation as cellular module ports for [Sierra Wireless HL7802](https://www.sierrawireless.com/products-and-solutions/embedded-solutions/products/hl7802/). This repository should be used with [FreeRTOS-Cellular-Interface](https://github.com/FreeRTOS/FreeRTOS-Cellular-Interface). See [FreeRTOS-Cellular-Interface README](https://github.com/FreeRTOS/FreeRTOS-Cellular-Interface/blob/main/README.md) for more details.
+This repository provides the reference implementation as cellular module ports for [Sierra Wireless HL7802](https://www.sierrawireless.com/iot-modules/lpwa-modules/hl7802/). This repository should be used with [FreeRTOS-Cellular-Interface](https://github.com/FreeRTOS/FreeRTOS-Cellular-Interface). See [FreeRTOS-Cellular-Interface README](https://github.com/FreeRTOS/FreeRTOS-Cellular-Interface/blob/main/README.md) for more details.
 
 ## Use Case
 

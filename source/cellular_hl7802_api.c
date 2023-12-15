@@ -775,7 +775,7 @@ static CellularATError_t parseEidrxToken( char * pToken,
                 if( ( tempValue >= 0 ) &&
                     ( tempValue <= ( int32_t ) UINT8_MAX ) )
                 {
-                    pEidrxSettingsList->eidrxList[ count ].requestedEdrxVaue = ( uint8_t ) tempValue;
+                    pEidrxSettingsList->eidrxList[ count ].requestedEdrxValue = ( uint8_t ) tempValue;
                 }
                 else
                 {
@@ -916,7 +916,7 @@ static CellularPktStatus_t _Cellular_RecvFuncGetEidrxSettings( CellularContext_t
             else
             {
                 LogDebug( ( "GetEidrx setting[%d]: RAT: %d, Value: 0x%x",
-                            count, pEidrxSettingsList->eidrxList[ count ].rat, pEidrxSettingsList->eidrxList[ count ].requestedEdrxVaue ) );
+                            count, pEidrxSettingsList->eidrxList[ count ].rat, pEidrxSettingsList->eidrxList[ count ].requestedEdrxValue ) );
             }
 
             pCommnadItem = pCommnadItem->pNext;
@@ -2450,7 +2450,7 @@ CellularError_t Cellular_SetEidrxSettings( CellularHandle_t cellularHandle,
                            "AT+KEDRXCFG=",
                            pEidrxSettings->mode,
                            pEidrxSettings->rat,
-                           pEidrxSettings->requestedEdrxVaue,
+                           pEidrxSettings->requestedEdrxValue,
                            pEidrxSettings->pagingTimeWindow );
         LogDebug( ( "Eidrx setting: %s ", cmdBuf ) );
         pktStatus = _Cellular_TimeoutAtcmdRequestWithCallback( pContext, atReqSetEidrx,

@@ -64,28 +64,15 @@ static CellularPktStatus_t recvFuncGetBandCfg( CellularContext_t * pContext,
 
 static cellularModuleContext_t cellularHl7802Context = { 0 };
 
-/* FreeRTOS Cellular Common Library porting interface. */
-/* coverity[misra_c_2012_rule_8_7_violation] */
 const char * CellularSrcTokenErrorTable[] =
 { "ERROR", "BUSY", "NO CARRIER", "NO ANSWER", "NO DIALTONE", "ABORTED", "+CMS ERROR", "+CME ERROR", "SEND FAIL" };
-/* FreeRTOS Cellular Common Library porting interface. */
-/* coverity[misra_c_2012_rule_8_7_violation] */
 uint32_t CellularSrcTokenErrorTableSize = sizeof( CellularSrcTokenErrorTable ) / sizeof( char * );
 
-/* FreeRTOS Cellular Common Library porting interface. */
-/* coverity[misra_c_2012_rule_8_7_violation] */
 const char * CellularSrcTokenSuccessTable[] =
 { "OK" };
-/* FreeRTOS Cellular Common Library porting interface. */
-/* coverity[misra_c_2012_rule_8_7_violation] */
 uint32_t CellularSrcTokenSuccessTableSize = sizeof( CellularSrcTokenSuccessTable ) / sizeof( char * );
 
-/* FreeRTOS Cellular Common Library porting interface. */
-/* coverity[misra_c_2012_rule_8_7_violation] */
 const char * CellularUrcTokenWoPrefixTable[] = { 0 };
-
-/* FreeRTOS Cellular Common Library porting interface. */
-/* coverity[misra_c_2012_rule_8_7_violation] */
 uint32_t CellularUrcTokenWoPrefixTableSize = 0;
 
 /*-----------------------------------------------------------*/
@@ -279,8 +266,6 @@ static bool appendRatList( char * pRatList,
 
 /*-----------------------------------------------------------*/
 
-/* FreeRTOS Cellular Common Library porting interface. */
-/* coverity[misra_c_2012_rule_8_7_violation] */
 CellularError_t Cellular_ModuleInit( const CellularContext_t * pContext,
                                      void ** ppModuleContext )
 {
@@ -313,8 +298,6 @@ CellularError_t Cellular_ModuleInit( const CellularContext_t * pContext,
 
 /*-----------------------------------------------------------*/
 
-/* FreeRTOS Cellular Common Library porting interface. */
-/* coverity[misra_c_2012_rule_8_7_violation] */
 CellularError_t Cellular_ModuleCleanUp( const CellularContext_t * pContext )
 {
     CellularError_t cellularStatus = CELLULAR_SUCCESS;
@@ -329,8 +312,6 @@ CellularError_t Cellular_ModuleCleanUp( const CellularContext_t * pContext )
 
 /*-----------------------------------------------------------*/
 
-/* FreeRTOS Cellular Common Library porting interface. */
-/* coverity[misra_c_2012_rule_8_7_violation] */
 CellularError_t Cellular_ModuleEnableUE( CellularContext_t * pContext )
 {
     CellularError_t cellularStatus = CELLULAR_SUCCESS;
@@ -484,8 +465,6 @@ CellularError_t Cellular_ModuleEnableUE( CellularContext_t * pContext )
 
 /*-----------------------------------------------------------*/
 
-/* FreeRTOS Cellular Common Library porting interface. */
-/* coverity[misra_c_2012_rule_8_7_violation] */
 CellularError_t Cellular_ModuleEnableUrc( CellularContext_t * pContext )
 {
     CellularError_t cellularStatus = CELLULAR_SUCCESS;

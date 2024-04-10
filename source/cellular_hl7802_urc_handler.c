@@ -41,6 +41,10 @@
 
 /*-----------------------------------------------------------*/
 
+static void _Cellular_UrcProcessCereg( CellularContext_t * pContext,
+                                       char * pInputLine );
+static void _Cellular_UrcProcessCreg( CellularContext_t * pContext,
+                                      char * pInputLine );
 static void _cellular_UrcProcessKtcpInd( CellularContext_t * pContext,
                                          char * pInputLine );
 static void handleTcpNotif( CellularSocketContext_t * pSocketData,
@@ -56,14 +60,42 @@ static void _cellular_UrcProcessKtcpData( CellularContext_t * pContext,
 /* Try to Keep this map in Alphabetical order. */
 CellularAtParseTokenMap_t CellularUrcHandlerTable[] =
 {
-    { "CEREG",      Cellular_CommonUrcProcessCereg },
-    { "CREG",       Cellular_CommonUrcProcessCreg  },
+    { "CEREG",      _Cellular_UrcProcessCereg      },
+    { "CREG",       _Cellular_UrcProcessCreg       },
     { "KTCP_DATA",  _cellular_UrcProcessKtcpData   },         /* TCP data URC. */
     { "KTCP_IND",   _cellular_UrcProcessKtcpInd    },         /* TCP status URC. */
     { "KTCP_NOTIF", _cellular_UrcProcessKtcpNotif  }          /* TCP connection failure. */
 };
 
 uint32_t CellularUrcHandlerTableSize = sizeof( CellularUrcHandlerTable ) / sizeof( CellularAtParseTokenMap_t );
+
+/*-----------------------------------------------------------*/
+
+static void _Cellular_UrcProcessCereg( CellularContext_t * pContext,
+                                      char * pInputLine )
+{
+    CellularPktStatus_t pktStatus;
+
+    pktStatus = Cellular_CommonUrcProcessCereg( pContext, pInputLine );
+    if( pktStatus != CELLULAR_PKT_STATUS_OK )
+    {
+        LogError( ( "_Cellular_UrcProcessCereg: process CEREG failed %d", pktStatus ) );
+    }
+}
+
+/*-----------------------------------------------------------*/
+
+static void _Cellular_UrcProcessCreg( CellularContext_t * pContext,
+                                      char * pInputLine )
+{
+    CellularPktStatus_t pktStatus;
+
+    pktStatus = Cellular_CommonUrcProcessCreg( pContext, pInputLine );
+    if( pktStatus != CELLULAR_PKT_STATUS_OK )
+    {
+        LogError( ( "_Cellular_UrcProcessCreg: process CREG failed %d", pktStatus ) );
+    }
+}
 
 /*-----------------------------------------------------------*/
 

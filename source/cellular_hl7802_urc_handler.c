@@ -72,7 +72,8 @@ uint32_t CellularUrcHandlerTableSize = sizeof( CellularUrcHandlerTable ) / sizeo
 /*-----------------------------------------------------------*/
 
 static void _Cellular_UrcProcessCereg( CellularContext_t * pContext,
-                                      char * pInputLine )
+                                       char * pInputLine )
+
 {
     CellularPktStatus_t pktStatus;
 
